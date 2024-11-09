@@ -1,0 +1,13 @@
+small{
+    float: right;
+}
+
+.pic{
+    width: 30%;
+}
+
+
+input.ng-invalid.ng-touched{
+    border:2px solid red;
+}
+
