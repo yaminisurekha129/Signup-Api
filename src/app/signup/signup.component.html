@@ -12,34 +12,28 @@
         <small *ngIf="formControls['email'].errors?.['email']">Enter a valid email.</small>
       </div>
   
-    
       <input type="password" placeholder="Create Password" formControlName="cp" class="form-control mt-3" />
       <div *ngIf="(submitted || formControls['cp'].touched) && formControls['cp'].invalid" >
         <small *ngIf="formControls['cp'].errors?.['required']">Password is required.</small>
         <small *ngIf="formControls['cp'].errors?.['minlength']">Password must be at least 8 characters long.</small>
       </div>
   
-     
       <input type="password" placeholder="Confirm Password" formControlName="confirm" class="form-control mt-3" />
       <div *ngIf="(submitted || formControls['confirm'].touched) && (formControls['confirm'].invalid || signForm.errors?.['mismatch'])" >
         <small *ngIf="formControls['confirm'].errors?.['required']">Confirm Password is required.</small>
         <small *ngIf="signForm.errors?.['mismatch']">Passwords do not match.</small>
       </div>
-  
-      
+
       <button type="submit" [disabled]="!signForm.valid" class="form-control mt-3 bg-primary text-white">
         Sign Up
       </button>
-  
-      <!-- Login Link -->
+
       <p class="text-center mt-3">
         Already have an account? 
         <button><a routerLink="/login">Login</a></button>
       </p>
     </div>
   </form>
-  
-
 </div>
 
 

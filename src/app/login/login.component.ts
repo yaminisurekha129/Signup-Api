@@ -10,8 +10,6 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   form!: FormGroup;
   formSubmitted = false;  
-  //router: any;
-
   constructor(private fb: FormBuilder,private router:Router) { }
 
   ngOnInit(): void {
@@ -21,7 +19,6 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  
   get email() {
     return this.form.get('email')!;
   }
@@ -43,8 +40,4 @@ export class LoginComponent implements OnInit {
 
     console.log('Form submitted successfully!', this.form.value);
   }
-  // openRegistrationPage(){    
-  //   console.log('coming signup');
-  //   this.router.navigate(["/signup"]);
-  // }
 }
