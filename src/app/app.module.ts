@@ -9,7 +9,8 @@ import { RouterModule,Routes } from '@angular/router';
 
 
 const routes: Routes = [
- 
+   {path:"",component: LoginComponent },
+  // {path:"home",component: HomeComponent},
   {
     path:"login",component:LoginComponent,
     children:
@@ -37,7 +38,7 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    
+   
   ],
   imports: [
     BrowserModule,
