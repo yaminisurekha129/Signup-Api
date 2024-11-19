@@ -1,0 +1,54 @@
+{
+
+"table1":[
+
+    {
+        "Ticket": "Ticket",
+        "Description": "Description",
+        "Status" : "Status"
+
+    },
+
+
+
+    {
+        "Ticket": "Admin Page",
+        "Description": "Validate the admin page",
+        "Status" : "In progress"
+
+    },
+
+    {
+        "Ticket": "Login page",
+        "Description": "Add icons in login page",
+        "Status" : "Todo"
+
+    },
+
+    {
+        "Ticket": "Responsive Page",
+        "Description": "Design a website that is responsive",
+        "Status" : "Completed"
+
+    },
+
+    {
+        "Ticket": "Table Creation",
+        "Description": "Create a table using Bootstrap",
+        "Status" : "Completed"
+
+    },
+
+    {
+        "Ticket": "Angular Dashboard",
+        "Description": "Design a dashboard using Angular materials",
+        "Status" : "Todo"
+
+    }
+
+
+]
+
+   
+}
+

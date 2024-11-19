@@ -1,0 +1,107 @@
+<mat-toolbar color="primary">
+
+  <button mat-icon-button aria-label="Menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+    <h1>Dash Board</h1>
+    <mat-icon class="ms-auto me-4">person</mat-icon>
+
+</mat-toolbar>
+
+  <mat-sidenav-container autosize>
+    <mat-sidenav [opened]="true" mode="side">
+      <mat-nav-list>
+        <a mat-list-item>
+          <span class="entry">
+            <mat-icon>house</mat-icon>
+            <span>Dashboard</span>
+          </span>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    
+    <mat-sidenav-content>
+
+
+     
+    <div class="row mt-5 justify-content-center">
+
+      <mat-card appearance="outlined" class="bg-danger shadow p-2 mb-5  rounded col-3  m-2">
+        <mat-card-content class="text-white text-center">
+          <h3>20</h3>
+          <span>Total Sprint</span>
+        </mat-card-content>
+      </mat-card>
+
+
+      <mat-card appearance="outlined" class="bg-primary shadow p-3 mb-5  rounded col-2 p-4 m-2">
+        <mat-card-content class="text-white text-center">
+          <h3 >20</h3>
+          <span>Total Tickets</span>
+         
+        </mat-card-content>
+      </mat-card>
+
+   
+
+      <mat-card appearance="outlined" class="bg-success shadow p-3 mb-5  rounded col-2 p-4 m-2">
+        <mat-card-content class="text-white text-center">
+          <h3>10</h3>
+         <span>Total Sprint Closed  </span> 
+         
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card appearance="outlined" class="bg-warning shadow p-3 mb-5  rounded col-2 p-4 m-2">
+        <mat-card-content class="text-white text-center">
+          <h3>60</h3>
+          <span>Total Ticket Closed </span>
+        </mat-card-content>
+      </mat-card>
+
+      <div class="row align-items-start ">
+        <div class="col-7">
+          <app-charts></app-charts>
+        </div>
+
+        <div class="col-5">
+          <app-table1></app-table1>
+        </div>
+
+      </div>
+
+      <div class="row align-items-start mt-5">
+
+        <div class="col-7 ">
+          <app-table2></app-table2>
+        </div>
+
+        <div class="col-5" >
+          <app-pie-chart></app-pie-chart>
+
+        </div>
+
+        
+
+
+      </div>
+
+       
+
+
+
+    
+
+
+
+
+
+
+ 
+      
+</div>  
+    
+    </mat-sidenav-content>
+  </mat-sidenav-container>
