@@ -4,7 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HttpClientModule } from '@angular/common/http';
 
 // Material Modules
 import { MatButtonModule } from '@angular/material/button';
@@ -73,6 +73,7 @@ const routes: Routes = [
     CanvasJSAngularChartsModule,
     CommonModule,
     MatTableModule,
+    HttpClientModule 
 
   ],
  

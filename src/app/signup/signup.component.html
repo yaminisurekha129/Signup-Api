@@ -1,41 +1,37 @@
-<div class="container ">
-
-
+<div class="container">
   <form [formGroup]="signForm" (ngSubmit)="call()" class="form-group border border-dashed p-5 mt-5">
     <h2 class="mt-5 text-center">Sign Up</h2>
     <div>
-  
-     
+      <!-- Email input field -->
       <input type="email" placeholder="Enter your email" formControlName="email" class="form-control mt-3" />
-      <div *ngIf="(submitted || formControls['email'].touched) && formControls['email'].invalid" >
+      <div *ngIf="(submitted || formControls['email'].touched) && formControls['email'].invalid">
         <small *ngIf="formControls['email'].errors?.['required']">Email is required.</small>
         <small *ngIf="formControls['email'].errors?.['email']">Enter a valid email.</small>
       </div>
-  
-      <input type="password" placeholder="Create Password" formControlName="cp" class="form-control mt-3" />
-      <div *ngIf="(submitted || formControls['cp'].touched) && formControls['cp'].invalid" >
-        <small *ngIf="formControls['cp'].errors?.['required']">Password is required.</small>
-        <small *ngIf="formControls['cp'].errors?.['minlength']">Password must be at least 8 characters long.</small>
+
+      <!-- Password input field -->
+      <input type="password" placeholder="Create Password" formControlName="password" class="form-control mt-3" />
+      <div *ngIf="(submitted || formControls['password'].touched) && formControls['password'].invalid">
+        <small *ngIf="formControls['password'].errors?.['required']">Password is required.</small>
+        <small *ngIf="formControls['password'].errors?.['minlength']">Password must be at least 8 characters long.</small>
       </div>
-  
-      <input type="password" placeholder="Confirm Password" formControlName="confirm" class="form-control mt-3" />
-      <div *ngIf="(submitted || formControls['confirm'].touched) && (formControls['confirm'].invalid || signForm.errors?.['mismatch'])" >
-        <small *ngIf="formControls['confirm'].errors?.['required']">Confirm Password is required.</small>
+
+      <!-- Confirm Password input field -->
+      <input type="password" placeholder="Confirm Password" formControlName="confirm_password" class="form-control mt-3" />
+      <div *ngIf="(submitted || formControls['confirm_password'].touched) && (formControls['confirm_password'].invalid || signForm.errors?.['mismatch'])">
+        <small *ngIf="formControls['confirm_password'].errors?.['required']">Confirm Password is required.</small>
         <small *ngIf="signForm.errors?.['mismatch']">Passwords do not match.</small>
       </div>
 
+      <!-- Submit button -->
       <button type="submit" [disabled]="!signForm.valid" class="form-control mt-3 bg-primary text-white">
         Sign Up
       </button>
 
+      <!-- Login redirect link -->
       <p class="text-center mt-3">
-        Already have an account? 
-        <button><a routerLink="/login">Login</a></button>
+        Already have an account? <a routerLink="/login">Login</a>
       </p>
     </div>
   </form>
 </div>
-
-
-
-
