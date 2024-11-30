@@ -10,6 +10,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/details', [DetailController::class, 'store']); 
-Route::get('/details', [DetailController::class, 'index']); 
-Route::get('/details/{id}', [DetailController::class, 'show']); 
+Route::post('/signup', [DetailController::class, 'store']); 
+Route::get('/signup', [DetailController::class, 'index']); 
+Route::get('/signup/{id}', [DetailController::class, 'show']); 
