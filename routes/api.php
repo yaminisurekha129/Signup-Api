@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TaskTable;
+
 
 
 
@@ -13,3 +15,10 @@ use App\Http\Controllers\AuthController;
 
 Route::post('/signup', [AuthController::class, 'signup']);
 Route::post('/login', [AuthController::class, 'login']);
+
+Route::get('/taskTable',[TaskTable::class,'index']);
+Route::get('/taskTable/{id}',[TaskTable::class,'show']);
+Route::post('/taskTable',[TaskTable::class,'store']);
+Route::put('/taskTable/{id}',[TaskTable::class,'update']);
+Route::delete('/taskTable/{id}',[TaskTable::class,'destroy']);
+
